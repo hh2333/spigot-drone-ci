@@ -12,4 +12,4 @@ java -jar BuildTools.jar --rev ${VERSION}
 curl -F document=@spigot-"${VERSION}".jar https://api.telegram.org/bot"${BOT_TOKEN}"/sendDocument?chat_id="${CHAT_ID}"
 END=$(date +"%s")
 DURTION=$((END - START))
-telegram_notify "构建完毕，此次构建耗时 ${DURTION} 秒。"
+telegram_notify "构建完毕，此次构建耗时 $((DURTION / 60)) 分 $((DURTION % 60)) 秒。"
