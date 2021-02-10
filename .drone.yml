@@ -16,8 +16,6 @@ steps:
         from_secret: bot_token
       CHAT_ID:
         from_secret: chat_id
-      VERSION:
-        from_secret: version
     commands:
       - ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - apt-get update && apt-get install -y openjdk-8-jdk git curl wget

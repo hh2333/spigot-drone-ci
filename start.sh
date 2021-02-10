@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VERSION=1.16.5
+
 function telegram_notify()
 {
   curl -d parse_mode="Markdown" -d text="${1}" https://api.telegram.org/bot"${BOT_TOKEN}"/sendMessage?chat_id="${CHAT_ID}"
